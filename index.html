@@ -5,12 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#080b14">
-  <meta name="description" content="Nagarjun Parmar — Senior Software Developer specializing in .NET, backend engineering, APIs and database-driven applications.">
+  <meta name="description" content="Nagarjun Parmar is a Senior Software Developer specializing in C#, .NET, ASP.NET Core, backend engineering, REST APIs, SQL Server and AI-assisted development.">
+  <meta name="author" content="Nagarjun Parmar">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nagarjun Parmar | Senior Software Developer">
+  <meta property="og:description" content="Building reliable web applications, backend systems and data-driven solutions with .NET.">
+  <meta property="og:url" content="https://jigs-mvc.github.io/nagarjun-portfolio/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nagarjun Parmar | Senior Software Developer">
+  <meta name="twitter:description" content=".NET development, backend engineering, APIs and AI-assisted workflows.">
+
   <title>Nagarjun Parmar | Senior Software Developer</title>
 
   <style>
     :root {
       --bg: #080b14;
+      --panel: #101728;
       --text: #f4f7ff;
       --muted: #a4aec4;
       --line: rgba(164,174,196,.18);
@@ -18,7 +30,6 @@
       --blue: #7296ff;
       --purple: #b18aff;
       --max: 1120px;
-      --journey-progress: 0%;
     }
 
     * {
@@ -30,7 +41,7 @@
       max-width: 100%;
       overflow-x: clip;
       scroll-behavior: smooth;
-      scroll-padding-top: 24px;
+      scroll-padding-top: 20px;
     }
 
     body {
@@ -39,20 +50,24 @@
       max-width: 100%;
       min-width: 0;
       overflow-x: clip;
-      position: relative;
       color: var(--text);
       background:
-        radial-gradient(ellipse at 15% 5%, rgba(57,94,196,.19), transparent 35%),
-        radial-gradient(ellipse at 88% 25%, rgba(135,73,200,.13), transparent 30%),
+        radial-gradient(ellipse at 12% 4%, rgba(57,94,196,.17), transparent 34%),
+        radial-gradient(ellipse at 92% 28%, rgba(135,73,200,.12), transparent 30%),
         var(--bg);
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
       color: inherit;
       text-decoration: none;
       -webkit-tap-highlight-color: transparent;
+    }
+
+    button, a {
+      touch-action: manipulation;
     }
 
     img, video, iframe {
@@ -66,12 +81,13 @@
       margin-inline: auto;
     }
 
+    /* Header */
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 26px 0;
+      padding: 22px 0;
       min-width: 0;
     }
 
@@ -81,21 +97,21 @@
       gap: 10px;
       min-width: 0;
       flex-shrink: 1;
+      font-size: 1.3rem;
       font-weight: 850;
       letter-spacing: -.05em;
-      font-size: 1.35rem;
     }
 
     .brand-mark {
       display: grid;
       place-items: center;
-      flex: 0 0 40px;
-      width: 40px;
-      height: 40px;
-      border-radius: 13px;
+      flex: 0 0 39px;
+      width: 39px;
+      height: 39px;
+      border-radius: 12px;
       color: #071019;
       background: linear-gradient(135deg, var(--cyan), var(--blue) 65%, var(--purple));
-      box-shadow: 0 0 30px rgba(98,231,245,.2);
+      box-shadow: 0 0 26px rgba(98,231,245,.18);
     }
 
     .brand-name {
@@ -104,22 +120,22 @@
     }
 
     .top-label {
+      max-width: 45%;
       color: var(--muted);
-      font-size: .72rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      text-align: right;
-      max-width: 46%;
-      min-width: 0;
+      font-size: .7rem;
       line-height: 1.5;
+      letter-spacing: .11em;
+      text-align: right;
+      text-transform: uppercase;
     }
 
+    /* Hero */
     .hero {
-      min-height: 76vh;
+      min-height: 72vh;
       display: grid;
       align-items: center;
-      padding: 72px 0 92px;
       position: relative;
+      padding: 64px 0 76px;
       min-width: 0;
     }
 
@@ -128,18 +144,19 @@
       z-index: 1;
       width: 100%;
       min-width: 0;
+      animation: hero-enter .8s ease both;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      max-width: 100%;
       color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: .17em;
       font-size: .76rem;
       font-weight: 800;
-      max-width: 100%;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
@@ -151,12 +168,12 @@
     }
 
     h1 {
-      max-width: 920px;
-      margin: 22px 0 24px;
-      font-size: clamp(3rem, 8vw, 6.9rem);
-      line-height: 1.02;
-      letter-spacing: -.07em;
-      font-weight: 820;
+      max-width: 950px;
+      margin: 20px 0 22px;
+      font-size: clamp(3.1rem, 8vw, 6.8rem);
+      line-height: 1.01;
+      letter-spacing: -.073em;
+      font-weight: 850;
       overflow-wrap: break-word;
     }
 
@@ -168,18 +185,19 @@
     }
 
     .hero-copy {
-      max-width: 680px;
+      max-width: 670px;
       margin: 0;
       color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(1rem, 2vw, 1.17rem);
+      line-height: 1.75;
       overflow-wrap: break-word;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 32px;
+      gap: 12px;
+      margin-top: 27px;
       min-width: 0;
     }
 
@@ -190,14 +208,14 @@
       gap: 10px;
       min-height: 48px;
       max-width: 100%;
-      padding: 12px 19px;
+      padding: 12px 18px;
       border: 1px solid var(--line);
       border-radius: 13px;
-      font-size: .92rem;
+      font-size: .9rem;
       font-weight: 750;
       text-align: center;
       overflow-wrap: anywhere;
-      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
     }
 
     .button:hover {
@@ -209,20 +227,20 @@
       color: #071019;
       border: 0;
       background: linear-gradient(110deg, var(--cyan), #9bb4ff);
-      box-shadow: 0 12px 35px rgba(98,231,245,.14);
+      box-shadow: 0 10px 30px rgba(98,231,245,.13);
     }
 
     .button-primary:hover {
-      box-shadow: 0 15px 40px rgba(98,231,245,.25);
+      box-shadow: 0 14px 36px rgba(98,231,245,.24);
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 22px;
-      margin-top: 43px;
+      gap: 10px 20px;
+      margin-top: 32px;
       color: var(--muted);
-      font-size: .84rem;
+      font-size: .82rem;
     }
 
     .hero-meta span {
@@ -242,14 +260,15 @@
 
     .orb {
       position: absolute;
+      top: 17%;
       right: 5%;
-      top: 19%;
-      width: min(28vw, 310px);
+      width: min(28vw, 300px);
       aspect-ratio: 1;
-      border-radius: 50%;
       border: 1px solid rgba(98,231,245,.13);
+      border-radius: 50%;
       background: radial-gradient(circle at 35% 30%, rgba(98,231,245,.12), rgba(114,150,255,.04) 42%, transparent 68%);
       pointer-events: none;
+      animation: orb-float 9s ease-in-out infinite;
     }
 
     .orb::before, .orb::after {
@@ -267,55 +286,54 @@
       transform: rotate(-29deg);
     }
 
+    /* General sections */
     section {
-      padding: 78px 0;
+      padding: 68px 0;
       min-width: 0;
       max-width: 100%;
     }
 
     .section-heading {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
       min-width: 0;
     }
 
     .section-kicker {
       color: var(--cyan);
-      font-size: .74rem;
+      font-size: .73rem;
       letter-spacing: .19em;
       text-transform: uppercase;
       font-weight: 800;
     }
 
     h2 {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      letter-spacing: -.055em;
-      line-height: 1.1;
       margin: 10px 0 0;
+      font-size: clamp(2rem, 4.5vw, 3.15rem);
+      line-height: 1.12;
+      letter-spacing: -.055em;
       overflow-wrap: break-word;
     }
 
     .section-intro {
-      color: var(--muted);
       max-width: 680px;
-      margin: 14px 0 0;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 22px;
-      min-width: 0;
+      margin: 13px 0 0;
+      color: var(--muted);
     }
 
     .glass-card {
       min-width: 0;
       max-width: 100%;
-      background: linear-gradient(145deg, rgba(19,27,45,.88), rgba(12,16,29,.8));
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: 0 20px 70px rgba(0,0,0,.12);
+      padding: 27px;
       overflow-wrap: break-word;
+      border: 1px solid var(--line);
+      border-radius: 21px;
+      background: linear-gradient(145deg, rgba(19,27,45,.88), rgba(12,16,29,.84));
+      box-shadow: 0 20px 70px rgba(0,0,0,.12);
+      transition: border-color .25s ease, transform .25s ease;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(98,231,245,.23);
     }
 
     .glass-card p {
@@ -327,48 +345,57 @@
       margin-bottom: 0;
     }
 
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr);
+      gap: 20px;
+      min-width: 0;
+    }
+
     .principles {
       display: grid;
-      gap: 13px;
+      gap: 16px;
     }
 
     .principle {
       display: flex;
-      gap: 14px;
       align-items: flex-start;
+      gap: 13px;
       min-width: 0;
     }
 
     .principle-icon {
+      display: grid;
+      place-items: center;
       flex: 0 0 38px;
       width: 38px;
       height: 38px;
-      display: grid;
-      place-items: center;
+      border: 1px solid rgba(98,231,245,.16);
       border-radius: 12px;
       color: var(--cyan);
       background: rgba(98,231,245,.08);
-      border: 1px solid rgba(98,231,245,.16);
       font-weight: 800;
     }
 
     .principle strong {
       display: block;
-      font-size: .96rem;
+      font-size: .95rem;
     }
 
     .principle small {
       display: block;
+      margin-top: 3px;
       color: var(--muted);
-      font-size: .86rem;
-      margin-top: 2px;
+      font-size: .85rem;
+      line-height: 1.55;
     }
 
-    /* Scroll timeline */
+    /* Timeline */
     .journey-wrap {
       position: relative;
-      padding: 12px 0 10px;
       min-width: 0;
+      padding: 12px 0 10px;
     }
 
     .journey-rail {
@@ -377,17 +404,14 @@
       bottom: 0;
       left: 50%;
       width: 2px;
+      overflow: hidden;
       transform: translateX(-50%);
       background: rgba(164,174,196,.16);
-      overflow: hidden;
     }
 
     .journey-fill {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: var(--journey-progress);
+      height: 0%;
       background: linear-gradient(var(--cyan), var(--blue), var(--purple));
       box-shadow: 0 0 18px rgba(98,231,245,.45);
       transition: height .08s linear;
@@ -395,16 +419,16 @@
 
     .journey-orb {
       position: absolute;
+      top: 0%;
       left: 50%;
-      top: var(--journey-progress);
-      transform: translate(-50%,-50%);
+      z-index: 2;
       width: 14px;
       height: 14px;
+      border: 3px solid #0b1020;
       border-radius: 50%;
       background: var(--cyan);
-      border: 3px solid #0b1020;
       box-shadow: 0 0 0 4px rgba(98,231,245,.12), 0 0 22px rgba(98,231,245,.85);
-      z-index: 2;
+      transform: translate(-50%,-50%);
       pointer-events: none;
     }
 
@@ -412,10 +436,10 @@
       position: relative;
       display: grid;
       grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-      gap: 58px;
-      margin: 0 0 30px;
       align-items: start;
+      gap: 58px;
       min-width: 0;
+      margin-bottom: 28px;
     }
 
     .journey-item:last-child {
@@ -423,10 +447,8 @@
     }
 
     .journey-card {
-      position: relative;
-      min-width: 0;
-      opacity: .65;
-      transform: translateY(12px);
+      opacity: .72;
+      transform: translateY(10px);
       transition: opacity .5s ease, transform .5s ease;
     }
 
@@ -464,13 +486,14 @@
 
     .journey-card h3 {
       margin: 0 0 4px;
-      font-size: 1.18rem;
+      font-size: 1.14rem;
+      line-height: 1.4;
       letter-spacing: -.025em;
     }
 
     .journey-company {
       color: var(--cyan);
-      font-size: .9rem;
+      font-size: .88rem;
       font-weight: 700;
     }
 
@@ -481,13 +504,13 @@
       border: 1px solid rgba(98,231,245,.17);
       border-radius: 999px;
       color: #d5e7f6;
-      font-size: .76rem;
       background: rgba(98,231,245,.05);
+      font-size: .75rem;
     }
 
     .journey-card p, .journey-card li {
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .88rem;
     }
 
     .journey-card p {
@@ -495,8 +518,8 @@
     }
 
     .journey-card ul {
-      padding-left: 18px;
       margin: 10px 0 0;
+      padding-left: 18px;
     }
 
     .journey-card li + li {
@@ -505,17 +528,18 @@
 
     .education-note {
       color: var(--muted);
-      font-size: .87rem;
+      font-size: .86rem;
     }
 
+    /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 16px;
+      gap: 15px;
     }
 
     .skill-group h3 {
-      margin: 0 0 15px;
+      margin: 0 0 14px;
       font-size: 1rem;
     }
 
@@ -526,12 +550,12 @@
     }
 
     .skill-chip {
-      border: 1px solid rgba(164,174,196,.17);
-      background: rgba(255,255,255,.025);
-      border-radius: 9px;
       padding: 6px 10px;
+      border: 1px solid rgba(164,174,196,.17);
+      border-radius: 9px;
       color: #cbd4e6;
-      font-size: .79rem;
+      background: rgba(255,255,255,.025);
+      font-size: .78rem;
       overflow-wrap: anywhere;
     }
 
@@ -541,67 +565,79 @@
       background: rgba(98,231,245,.06);
     }
 
+    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 18px;
+      gap: 17px;
     }
 
     .project-card {
       display: flex;
       flex-direction: column;
-      min-height: 100%;
       min-width: 0;
+      min-height: 100%;
     }
 
     .project-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 17px;
+      gap: 10px;
+      margin-bottom: 16px;
     }
 
     .project-number {
-      color: rgba(98,231,245,.7);
-      font-size: .8rem;
-      letter-spacing: .15em;
+      color: rgba(98,231,245,.75);
+      font-size: .76rem;
+      letter-spacing: .14em;
       font-weight: 800;
     }
 
     .project-type {
-      color: var(--muted);
+      padding: 4px 9px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 4px 9px;
+      color: var(--muted);
       font-size: .7rem;
-      white-space: normal;
+    }
+
+    .project-type.professional {
+      border-color: rgba(98,231,245,.23);
+      color: #a9f2fb;
+      background: rgba(98,231,245,.05);
+    }
+
+    .project-type.concept {
+      border-color: rgba(177,138,255,.25);
+      color: #d6c5ff;
+      background: rgba(177,138,255,.05);
     }
 
     .project-card h3 {
-      font-size: 1.35rem;
       margin: 0 0 4px;
+      font-size: 1.32rem;
       letter-spacing: -.035em;
     }
 
     .project-subtitle {
+      margin-bottom: 12px;
       color: var(--cyan);
-      font-size: .86rem;
+      font-size: .85rem;
       font-weight: 650;
-      margin-bottom: 14px;
     }
 
     .project-card p {
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .89rem;
     }
 
     .project-card ul {
-      color: var(--muted);
-      font-size: .88rem;
+      margin: 0 0 18px;
       padding-left: 18px;
-      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: .87rem;
     }
 
     .project-card li + li {
@@ -617,19 +653,20 @@
     }
 
     .project-stack span {
-      color: #c9d7ed;
-      font-size: .74rem;
-      border-radius: 7px;
       padding: 5px 8px;
+      border-radius: 7px;
+      color: #c9d7ed;
       background: rgba(114,150,255,.08);
+      font-size: .73rem;
     }
 
+    /* Contact */
     .contact-panel {
       display: grid;
       grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr);
-      gap: 30px;
+      gap: 28px;
       align-items: center;
-      padding: clamp(24px,5vw,52px);
+      padding: clamp(24px,5vw,48px);
       position: relative;
       overflow: hidden;
     }
@@ -639,13 +676,13 @@
     }
 
     .contact-panel p {
-      color: var(--muted);
       max-width: 550px;
+      color: var(--muted);
     }
 
     .contact-links {
       display: grid;
-      gap: 12px;
+      gap: 11px;
       position: relative;
       z-index: 1;
       min-width: 0;
@@ -653,23 +690,23 @@
 
     .contact-link {
       display: block;
-      padding: 14px 16px;
-      border-radius: 13px;
+      min-width: 0;
+      padding: 14px 15px;
       border: 1px solid var(--line);
+      border-radius: 13px;
       background: rgba(255,255,255,.025);
       overflow-wrap: anywhere;
-      min-width: 0;
     }
 
     .contact-link small {
       display: block;
-      color: var(--muted);
-      font-size: .74rem;
       margin-bottom: 3px;
+      color: var(--muted);
+      font-size: .72rem;
     }
 
     .contact-link span {
-      font-size: .9rem;
+      font-size: .87rem;
       font-weight: 650;
       overflow-wrap: anywhere;
     }
@@ -679,17 +716,18 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 12px;
-      padding: 26px 0 35px;
-      margin-top: 30px;
+      margin-top: 28px;
+      padding: 24px 0 32px;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: .8rem;
+      font-size: .78rem;
     }
 
+    /* Reveal animations */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
-      transition: opacity .7s ease, transform .7s ease;
+      transition: opacity .65s ease, transform .65s ease;
     }
 
     .reveal.in-view {
@@ -697,83 +735,103 @@
       transform: translateY(0);
     }
 
-    /* Mobile layout: prevent sideways movement and clipping */
+    @keyframes hero-enter {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes orb-float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(4deg); }
+    }
+
+    /* Tablet and mobile */
     @media (max-width: 760px) {
       .page-shell {
         width: calc(100% - 32px);
-        max-width: 100%;
       }
 
       .topbar {
-        padding: 18px 0;
-        gap: 10px;
+        gap: 9px;
+        padding: 17px 0;
       }
 
       .brand {
         gap: 7px;
-        font-size: clamp(1rem,4.5vw,1.25rem);
+        font-size: clamp(1rem,4.5vw,1.22rem);
       }
 
       .brand-mark {
-        flex-basis: 36px;
-        width: 36px;
-        height: 36px;
+        flex-basis: 35px;
+        width: 35px;
+        height: 35px;
         border-radius: 11px;
       }
 
       .top-label {
         max-width: 43%;
-        font-size: .58rem;
-        letter-spacing: .07em;
+        font-size: .56rem;
+        letter-spacing: .055em;
       }
 
       .hero {
         min-height: auto;
-        padding: 72px 0 68px;
+        padding: 53px 0 50px;
       }
 
       .orb {
-        top: 8%;
+        top: 6%;
         right: -8%;
-        width: 44vw;
-        max-width: 220px;
-        opacity: .45;
+        width: 43vw;
+        max-width: 205px;
+        opacity: .42;
       }
 
       .eyebrow {
-        font-size: .68rem;
-        letter-spacing: .12em;
+        font-size: .66rem;
+        letter-spacing: .105em;
       }
 
       h1 {
-        font-size: clamp(2.65rem, 11.2vw, 4.6rem);
-        line-height: 1.04;
+        margin: 18px 0;
+        font-size: clamp(2.65rem, 11.1vw, 4.45rem);
+        line-height: 1.055;
         letter-spacing: -.065em;
-        max-width: 100%;
       }
 
       .hero-copy {
-        font-size: 1rem;
-        line-height: 1.7;
+        font-size: .97rem;
+        line-height: 1.68;
       }
 
       .hero-actions {
         gap: 10px;
-        margin-top: 25px;
+        margin-top: 22px;
       }
 
       .button {
-        padding: 12px 15px;
-        font-size: .88rem;
+        padding: 11px 14px;
+        font-size: .85rem;
       }
 
       .hero-meta {
-        margin-top: 28px;
-        font-size: .8rem;
+        gap: 9px 16px;
+        margin-top: 23px;
+        font-size: .77rem;
       }
 
       section {
-        padding: 55px 0;
+        padding: 49px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 24px;
       }
 
       .about-grid,
@@ -787,12 +845,12 @@
       }
 
       .glass-card {
-        padding: 22px;
+        padding: 21px;
         border-radius: 18px;
       }
 
       .journey-wrap {
-        padding: 12px 0 10px 27px;
+        padding: 10px 0 8px 26px;
       }
 
       .journey-rail {
@@ -806,7 +864,7 @@
 
       .journey-item {
         display: block;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
 
       .journey-item:nth-child(odd)::after,
@@ -814,16 +872,16 @@
         left: 7px;
         right: auto;
         top: 26px;
-        width: 20px;
+        width: 19px;
         transform: none;
       }
 
       .journey-card {
-        opacity: .8;
+        opacity: .85;
       }
 
       .contact-panel {
-        gap: 22px;
+        gap: 20px;
       }
 
       .contact-panel .hero-actions {
@@ -835,7 +893,7 @@
       }
 
       footer {
-        font-size: .76rem;
+        font-size: .74rem;
       }
     }
 
@@ -846,12 +904,12 @@
 
       .top-label {
         max-width: 40%;
-        font-size: .53rem;
-        letter-spacing: .04em;
+        font-size: .52rem;
+        letter-spacing: .035em;
       }
 
       .brand {
-        font-size: .98rem;
+        font-size: .97rem;
       }
 
       .brand-mark {
@@ -861,7 +919,7 @@
       }
 
       h1 {
-        font-size: clamp(2.45rem, 11vw, 3.2rem);
+        font-size: clamp(2.4rem, 10.7vw, 3.1rem);
       }
 
       .hero-actions .button {
@@ -869,20 +927,27 @@
       }
 
       .glass-card {
-        padding: 18px;
+        padding: 17px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
       *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
         animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
       }
 
       .reveal {
         opacity: 1;
         transform: none;
+      }
+
+      .orb {
+        animation: none;
       }
     }
   </style>
@@ -922,6 +987,7 @@
                download="Nagarjun_Parmar_Resume.pdf">
               Download Resume <span aria-hidden="true">↓</span>
             </a>
+
             <a class="button" href="#experience">
               Explore my journey <span aria-hidden="true">↘</span>
             </a>
@@ -1155,7 +1221,7 @@
           <article class="glass-card project-card">
             <div class="project-top">
               <span class="project-number">PROJECT / 01</span>
-              <span class="project-type">Professional experience</span>
+              <span class="project-type professional">Professional experience</span>
             </div>
             <h3>QEval</h3>
             <div class="project-subtitle">Contact-Centre Quality Evaluation</div>
@@ -1173,7 +1239,7 @@
           <article class="glass-card project-card">
             <div class="project-top">
               <span class="project-number">PROJECT / 02</span>
-              <span class="project-type">Professional experience</span>
+              <span class="project-type professional">Professional experience</span>
             </div>
             <h3>iCON</h3>
             <div class="project-subtitle">Transport Management & Customer Invoicing</div>
@@ -1191,7 +1257,7 @@
           <article class="glass-card project-card">
             <div class="project-top">
               <span class="project-number">CONCEPT / 03</span>
-              <span class="project-type">Personal concept</span>
+              <span class="project-type concept">Personal concept</span>
             </div>
             <h3>Stock & Invoice Manager</h3>
             <div class="project-subtitle">Inventory, Sales & Billing</div>
@@ -1209,7 +1275,7 @@
           <article class="glass-card project-card">
             <div class="project-top">
               <span class="project-number">CONCEPT / 04</span>
-              <span class="project-type">Personal concept</span>
+              <span class="project-type concept">Personal concept</span>
             </div>
             <h3>Knowledge-Base Assistant</h3>
             <div class="project-subtitle">Searchable Support Knowledge</div>
@@ -1278,7 +1344,7 @@
   </div>
 
   <script>
-    // Reveal sections when they enter the viewport.
+    // Reveal sections only when they approach the viewport.
     if ("IntersectionObserver" in window) {
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -1287,7 +1353,10 @@
             revealObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.08 });
+      }, {
+        threshold: 0.06,
+        rootMargin: "0px 0px 40px 0px"
+      });
 
       document.querySelectorAll(".reveal").forEach((element) => {
         revealObserver.observe(element);
@@ -1298,7 +1367,7 @@
       });
     }
 
-    // Update the timeline progress as the user scrolls.
+    // Scroll-driven timeline progress.
     const journeySections = document.querySelectorAll(".journey-wrap");
     let ticking = false;
 
@@ -1316,10 +1385,11 @@
           ? Math.max(0, Math.min(1, (start - rect.top) / distance))
           : 0;
 
-        journey.style.setProperty(
-          "--journey-progress",
-          `${progress * 100}%`
-        );
+        journey.querySelector(".journey-fill").style.height =
+          `${progress * 100}%`;
+
+        journey.querySelector(".journey-orb").style.top =
+          `${progress * 100}%`;
 
         journey.querySelectorAll(".journey-item").forEach((item) => {
           const itemRect = item.getBoundingClientRect();
@@ -1347,8 +1417,8 @@
     window.addEventListener("resize", requestJourneyUpdate);
     updateJourneys();
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    // Current copyright year.
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
