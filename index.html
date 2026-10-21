@@ -1,204 +1,1354 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8fafc">
-<meta name="description" content="Nagarjun Parmar — Senior Software Developer specializing in .NET, ASP.NET Core, C#, SQL Server and web application development.">
-<title>Nagarjun Parmar | Senior Software Developer</title>
-<style>
-:root{--bg:#f8fafc;--card:#fff;--text:#172033;--muted:#64748b;--blue:#2563eb;--line:#e2e8f0}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1080px,90%);margin:auto}
-header{position:sticky;top:0;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);z-index:5;backdrop-filter:blur(12px)}
-nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:21px;font-weight:850;letter-spacing:-1px}.logo span{color:var(--blue)}
-.links{display:flex;gap:22px;font-size:14px;color:var(--muted);font-weight:600}
-.links a:hover{color:var(--blue)}
-.hero{padding:100px 0 86px;background:radial-gradient(ellipse at 80% 20%,#dbeafe 0,transparent 42%)}
-.tag{display:inline-block;padding:7px 13px;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:30px;font-size:13px;font-weight:700}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.08;letter-spacing:-3px;margin:24px 0}
-h1 span{color:var(--blue)}
-.lead{max-width:690px;color:var(--muted);font-size:18px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:700;border:1px solid var(--line);background:white}
-.btn.primary{background:var(--blue);border-color:var(--blue);color:white}
-section{padding:70px 0;scroll-margin-top:70px}
-.section-head{margin-bottom:28px}
-.kicker{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px}
-h2{font-size:32px;letter-spacing:-1px;margin:5px 0}
-p{margin-top:8px}
-.muted{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.card{padding:25px;background:var(--card);border:1px solid var(--line);border-radius:17px;box-shadow:0 5px 18px rgba(15,23,42,.025)}
-.card h3{margin:0 0 7px;font-size:19px}
-.timeline{border-left:2px solid #dbeafe;margin-left:8px;padding-left:25px}
-.job{position:relative;margin:0 0 28px}
-.job:before{content:"";position:absolute;left:-33px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--blue);border:3px solid var(--bg)}
-.date{font-size:13px;color:var(--blue);font-weight:750}
-.company{font-weight:750}
-.pills{display:flex;flex-wrap:wrap;gap:9px}
-.pill{padding:7px 12px;background:white;border:1px solid var(--line);border-radius:9px;font-size:13px;font-weight:650}
-.project-label{font-size:12px;color:#92400e;background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:12px}
-.contact{background:#eff6ff;border:1px solid #dbeafe;border-radius:20px;padding:35px}
-footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-@media(max-width:650px){.links{gap:12px;font-size:12px}.links a:nth-child(2),.links a:nth-child(3){display:none}.hero{padding:70px 0}.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}section{padding:52px 0}.card{padding:21px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Nagarjun Parmar — Senior Software Developer specializing in .NET, backend engineering, APIs and database-driven applications.">
+  <title>Nagarjun Parmar | Senior Software Developer</title>
+
+  <style>
+    :root {
+      --bg: #080b14;
+      --text: #f4f7ff;
+      --muted: #a4aec4;
+      --line: rgba(164,174,196,.18);
+      --cyan: #62e7f5;
+      --blue: #7296ff;
+      --purple: #b18aff;
+      --max: 1120px;
+      --journey-progress: 0%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      position: relative;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 15% 5%, rgba(57,94,196,.19), transparent 35%),
+        radial-gradient(ellipse at 88% 25%, rgba(135,73,200,.13), transparent 30%),
+        var(--bg);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img, video, iframe {
+      max-width: 100%;
+    }
+
+    .page-shell {
+      width: min(var(--max), calc(100% - 40px));
+      max-width: 100%;
+      min-width: 0;
+      margin-inline: auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 26px 0;
+      min-width: 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex-shrink: 1;
+      font-weight: 850;
+      letter-spacing: -.05em;
+      font-size: 1.35rem;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      color: #071019;
+      background: linear-gradient(135deg, var(--cyan), var(--blue) 65%, var(--purple));
+      box-shadow: 0 0 30px rgba(98,231,245,.2);
+    }
+
+    .brand-name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .top-label {
+      color: var(--muted);
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-align: right;
+      max-width: 46%;
+      min-width: 0;
+      line-height: 1.5;
+    }
+
+    .hero {
+      min-height: 76vh;
+      display: grid;
+      align-items: center;
+      padding: 72px 0 92px;
+      position: relative;
+      min-width: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: .76rem;
+      font-weight: 800;
+      max-width: 100%;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      flex-shrink: 0;
+      background: currentColor;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 22px 0 24px;
+      font-size: clamp(3rem, 8vw, 6.9rem);
+      line-height: 1.02;
+      letter-spacing: -.07em;
+      font-weight: 820;
+      overflow-wrap: break-word;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(100deg, var(--cyan), #8aa5ff 52%, var(--purple));
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      overflow-wrap: break-word;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+      min-width: 0;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      max-width: 100%;
+      padding: 12px 19px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      font-size: .92rem;
+      font-weight: 750;
+      text-align: center;
+      overflow-wrap: anywhere;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      border-color: rgba(98,231,245,.55);
+    }
+
+    .button-primary {
+      color: #071019;
+      border: 0;
+      background: linear-gradient(110deg, var(--cyan), #9bb4ff);
+      box-shadow: 0 12px 35px rgba(98,231,245,.14);
+    }
+
+    .button-primary:hover {
+      box-shadow: 0 15px 40px rgba(98,231,245,.25);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin-top: 43px;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 7px;
+      background: #70e4bd;
+      border-radius: 50%;
+      box-shadow: 0 0 14px #70e4bd;
+    }
+
+    .orb {
+      position: absolute;
+      right: 5%;
+      top: 19%;
+      width: min(28vw, 310px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(98,231,245,.13);
+      background: radial-gradient(circle at 35% 30%, rgba(98,231,245,.12), rgba(114,150,255,.04) 42%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .orb::before, .orb::after {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      border: 1px solid rgba(177,138,255,.2);
+      border-radius: 44% 56% 61% 39% / 42% 40% 60% 58%;
+      transform: rotate(36deg);
+    }
+
+    .orb::after {
+      inset: 25%;
+      border-color: rgba(98,231,245,.25);
+      transform: rotate(-29deg);
+    }
+
+    section {
+      padding: 78px 0;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .section-heading {
+      margin-bottom: 32px;
+      min-width: 0;
+    }
+
+    .section-kicker {
+      color: var(--cyan);
+      font-size: .74rem;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      letter-spacing: -.055em;
+      line-height: 1.1;
+      margin: 10px 0 0;
+      overflow-wrap: break-word;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 14px 0 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      min-width: 0;
+    }
+
+    .glass-card {
+      min-width: 0;
+      max-width: 100%;
+      background: linear-gradient(145deg, rgba(19,27,45,.88), rgba(12,16,29,.8));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 20px 70px rgba(0,0,0,.12);
+      overflow-wrap: break-word;
+    }
+
+    .glass-card p {
+      margin-top: 0;
+      color: var(--muted);
+    }
+
+    .glass-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .principles {
+      display: grid;
+      gap: 13px;
+    }
+
+    .principle {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      min-width: 0;
+    }
+
+    .principle-icon {
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: var(--cyan);
+      background: rgba(98,231,245,.08);
+      border: 1px solid rgba(98,231,245,.16);
+      font-weight: 800;
+    }
+
+    .principle strong {
+      display: block;
+      font-size: .96rem;
+    }
+
+    .principle small {
+      display: block;
+      color: var(--muted);
+      font-size: .86rem;
+      margin-top: 2px;
+    }
+
+    /* Scroll timeline */
+    .journey-wrap {
+      position: relative;
+      padding: 12px 0 10px;
+      min-width: 0;
+    }
+
+    .journey-rail {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      transform: translateX(-50%);
+      background: rgba(164,174,196,.16);
+      overflow: hidden;
+    }
+
+    .journey-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--journey-progress);
+      background: linear-gradient(var(--cyan), var(--blue), var(--purple));
+      box-shadow: 0 0 18px rgba(98,231,245,.45);
+      transition: height .08s linear;
+    }
+
+    .journey-orb {
+      position: absolute;
+      left: 50%;
+      top: var(--journey-progress);
+      transform: translate(-50%,-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cyan);
+      border: 3px solid #0b1020;
+      box-shadow: 0 0 0 4px rgba(98,231,245,.12), 0 0 22px rgba(98,231,245,.85);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .journey-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      gap: 58px;
+      margin: 0 0 30px;
+      align-items: start;
+      min-width: 0;
+    }
+
+    .journey-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .journey-card {
+      position: relative;
+      min-width: 0;
+      opacity: .65;
+      transform: translateY(12px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .journey-item.visible .journey-card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .journey-item:nth-child(odd) .journey-card {
+      grid-column: 1;
+    }
+
+    .journey-item:nth-child(even) .journey-card {
+      grid-column: 2;
+    }
+
+    .journey-item:nth-child(odd)::after,
+    .journey-item:nth-child(even)::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      width: 30px;
+      height: 1px;
+      background: linear-gradient(90deg,var(--cyan),transparent);
+    }
+
+    .journey-item:nth-child(odd)::after {
+      left: calc(50% - 1px);
+    }
+
+    .journey-item:nth-child(even)::after {
+      right: calc(50% - 1px);
+      transform: rotate(180deg);
+    }
+
+    .journey-card h3 {
+      margin: 0 0 4px;
+      font-size: 1.18rem;
+      letter-spacing: -.025em;
+    }
+
+    .journey-company {
+      color: var(--cyan);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .journey-date {
+      display: inline-block;
+      margin: 12px 0;
+      padding: 5px 10px;
+      border: 1px solid rgba(98,231,245,.17);
+      border-radius: 999px;
+      color: #d5e7f6;
+      font-size: .76rem;
+      background: rgba(98,231,245,.05);
+    }
+
+    .journey-card p, .journey-card li {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .journey-card p {
+      margin: 0;
+    }
+
+    .journey-card ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+
+    .journey-card li + li {
+      margin-top: 5px;
+    }
+
+    .education-note {
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .skill-group h3 {
+      margin: 0 0 15px;
+      font-size: 1rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-chip {
+      border: 1px solid rgba(164,174,196,.17);
+      background: rgba(255,255,255,.025);
+      border-radius: 9px;
+      padding: 6px 10px;
+      color: #cbd4e6;
+      font-size: .79rem;
+      overflow-wrap: anywhere;
+    }
+
+    .skill-chip.highlight {
+      border-color: rgba(98,231,245,.28);
+      color: #a9f2fb;
+      background: rgba(98,231,245,.06);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      min-width: 0;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 17px;
+    }
+
+    .project-number {
+      color: rgba(98,231,245,.7);
+      font-size: .8rem;
+      letter-spacing: .15em;
+      font-weight: 800;
+    }
+
+    .project-type {
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: .7rem;
+      white-space: normal;
+    }
+
+    .project-card h3 {
+      font-size: 1.35rem;
+      margin: 0 0 4px;
+      letter-spacing: -.035em;
+    }
+
+    .project-subtitle {
+      color: var(--cyan);
+      font-size: .86rem;
+      font-weight: 650;
+      margin-bottom: 14px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .project-card ul {
+      color: var(--muted);
+      font-size: .88rem;
+      padding-left: 18px;
+      margin: 0 0 20px;
+    }
+
+    .project-card li + li {
+      margin-top: 6px;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 15px;
+    }
+
+    .project-stack span {
+      color: #c9d7ed;
+      font-size: .74rem;
+      border-radius: 7px;
+      padding: 5px 8px;
+      background: rgba(114,150,255,.08);
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr);
+      gap: 30px;
+      align-items: center;
+      padding: clamp(24px,5vw,52px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-panel h2 {
+      max-width: 540px;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      max-width: 550px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    .contact-link {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 13px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+      overflow-wrap: anywhere;
+      min-width: 0;
+    }
+
+    .contact-link small {
+      display: block;
+      color: var(--muted);
+      font-size: .74rem;
+      margin-bottom: 3px;
+    }
+
+    .contact-link span {
+      font-size: .9rem;
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 26px 0 35px;
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile layout: prevent sideways movement and clipping */
+    @media (max-width: 760px) {
+      .page-shell {
+        width: calc(100% - 32px);
+        max-width: 100%;
+      }
+
+      .topbar {
+        padding: 18px 0;
+        gap: 10px;
+      }
+
+      .brand {
+        gap: 7px;
+        font-size: clamp(1rem,4.5vw,1.25rem);
+      }
+
+      .brand-mark {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+      }
+
+      .top-label {
+        max-width: 43%;
+        font-size: .58rem;
+        letter-spacing: .07em;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 72px 0 68px;
+      }
+
+      .orb {
+        top: 8%;
+        right: -8%;
+        width: 44vw;
+        max-width: 220px;
+        opacity: .45;
+      }
+
+      .eyebrow {
+        font-size: .68rem;
+        letter-spacing: .12em;
+      }
+
+      h1 {
+        font-size: clamp(2.65rem, 11.2vw, 4.6rem);
+        line-height: 1.04;
+        letter-spacing: -.065em;
+        max-width: 100%;
+      }
+
+      .hero-copy {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .hero-actions {
+        gap: 10px;
+        margin-top: 25px;
+      }
+
+      .button {
+        padding: 12px 15px;
+        font-size: .88rem;
+      }
+
+      .hero-meta {
+        margin-top: 28px;
+        font-size: .8rem;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .about-grid,
+      .contact-panel {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .glass-card {
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      .journey-wrap {
+        padding: 12px 0 10px 27px;
+      }
+
+      .journey-rail {
+        left: 6px;
+        transform: none;
+      }
+
+      .journey-orb {
+        left: 7px;
+      }
+
+      .journey-item {
+        display: block;
+        margin-bottom: 18px;
+      }
+
+      .journey-item:nth-child(odd)::after,
+      .journey-item:nth-child(even)::after {
+        left: 7px;
+        right: auto;
+        top: 26px;
+        width: 20px;
+        transform: none;
+      }
+
+      .journey-card {
+        opacity: .8;
+      }
+
+      .contact-panel {
+        gap: 22px;
+      }
+
+      .contact-panel .hero-actions {
+        align-items: stretch;
+      }
+
+      .contact-panel .button {
+        flex: 1 1 auto;
+      }
+
+      footer {
+        font-size: .76rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .page-shell {
+        width: calc(100% - 24px);
+      }
+
+      .top-label {
+        max-width: 40%;
+        font-size: .53rem;
+        letter-spacing: .04em;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      .brand-mark {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+      }
+
+      h1 {
+        font-size: clamp(2.45rem, 11vw, 3.2rem);
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .glass-card {
+        padding: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<div class="wrap">
-<nav>
-<a class="logo" href="#home">NP<span>.</span></a>
-<div class="links">
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-</div>
-</header>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Nagarjun Parmar home">
+        <span class="brand-mark">NP.</span>
+        <span class="brand-name">nagarjun<span class="gradient-text">.dev</span></span>
+      </a>
+      <div class="top-label">Software Developer · Gujarat, India</div>
+    </header>
 
-<main>
-<section class="hero" id="home">
-<div class="wrap">
-<span class="tag">SOFTWARE DEVELOPMENT · .NET</span>
-<h1>Hi, I'm Nagarjun<br><span>Parmar.</span></h1>
-<p class="lead">Senior Software Developer building reliable web applications, backend services and database-driven solutions using the Microsoft technology stack.</p>
-<div class="actions">
-<a class="btn primary" href="#experience">Explore my experience ↗</a>
-<a class="btn" href="https://www.linkedin.com/in/nagarjun-p-5420171b4" target="_blank" rel="noopener">LinkedIn profile ↗</a>
-</div>
-</div>
-</section>
+    <main id="top">
+      <section class="hero">
+        <div class="orb" aria-hidden="true"></div>
 
-<section id="about">
-<div class="wrap">
-<div class="section-head"><div class="kicker">A little about me</div><h2>Turning ideas into software.</h2></div>
-<div class="card">
-<p>I'm a software developer with professional experience dating back to 2020, focused on application and web development. I work with C#, .NET, ASP.NET MVC, ASP.NET Core and SQL to build maintainable business applications.</p>
-<p class="muted">My interests include backend development, REST APIs, database design, performance optimization, clean architecture and improving development workflows through modern tools.</p>
-</div>
-</div>
-</section>
+        <div class="hero-content">
+          <div class="eyebrow">Senior Software Developer</div>
 
-<section id="experience">
-<div class="wrap">
-<div class="section-head"><div class="kicker">Career journey</div><h2>Professional experience</h2></div>
-<div class="timeline">
-<div class="job">
-<div class="date">May 2026 – Present</div>
-<h3>Senior Software Developer</h3>
-<div class="company">Etech Global Services · Gandhinagar, Gujarat</div>
-<p class="muted">Software development and application engineering. Add your verified responsibilities, products and achievements here.</p>
-</div>
-<div class="job">
-<div class="date">September 2024 – April 2026 · Please verify dates</div>
-<h3>Software Developer</h3>
-<div class="company">Etech Global Services</div>
-<p class="muted">Application development and maintenance. Update this section to reflect your actual role dates and key contributions.</p>
-</div>
-<div class="job">
-<div class="date">June 2021 – September 2024</div>
-<h3>Senior Software Developer</h3>
-<div class="company">PrishuSoft · Ahmedabad, Gujarat</div>
-<p class="muted">Software development experience. Add the projects, technical responsibilities and measurable achievements you can confirm.</p>
-</div>
-<div class="job">
-<div class="date">March 2020 – June 2021</div>
-<h3>Junior Software Developer</h3>
-<div class="company">Desai Software · Surat, Gujarat</div>
-<p class="muted">Early-career software development experience. Add your primary technologies and contributions.</p>
-</div>
-</div>
-</div>
-</section>
+          <h1>
+            Engineering ideas<br>
+            into <span class="gradient-text">real solutions.</span>
+          </h1>
 
-<section id="skills">
-<div class="wrap">
-<div class="section-head"><div class="kicker">Technical toolkit</div><h2>Technologies & skills</h2></div>
-<div class="card">
-<h3>Backend & Microsoft technologies</h3>
-<div class="pills">
-<span class="pill">C#</span><span class="pill">.NET</span><span class="pill">ASP.NET MVC</span><span class="pill">ASP.NET Core</span><span class="pill">Razor Pages</span><span class="pill">Entity Framework Core</span><span class="pill">Dapper</span>
-</div>
-<hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
-<h3>Databases & APIs</h3>
-<div class="pills">
-<span class="pill">SQL Server</span><span class="pill">MySQL</span><span class="pill">SQL & Stored Procedures</span><span class="pill">REST APIs</span><span class="pill">JavaScript</span><span class="pill">gRPC</span>
-</div>
-<hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
-<h3>Tools & engineering</h3>
-<div class="pills">
-<span class="pill">Visual Studio</span><span class="pill">Git</span><span class="pill">CI/CD</span><span class="pill">GitHub Copilot</span><span class="pill">Azure / AWS</span><span class="pill">Docker</span>
-</div>
-<p class="muted" style="font-size:12px">Keep only the technologies you can confidently discuss in an interview.</p>
-</div>
-</div>
-</section>
+          <p class="hero-copy">
+            I build reliable web applications and backend systems with .NET,
+            APIs, and data-driven engineering. Focused on clean implementation,
+            practical problem-solving, and thoughtful use of AI-assisted development.
+          </p>
 
-<section id="projects">
-<div class="wrap">
-<div class="section-head"><div class="kicker">Selected work</div><h2>Projects & ideas</h2><p class="muted">Replace these concepts with verified projects, screenshots and repository links before presenting them as completed work.</p></div>
-<div class="grid">
-<div class="card">
-<span class="project-label">Project candidate · Verify status</span>
-<h3>Stock & Invoice Management</h3>
-<p class="muted">A business application concept for purchase and sales invoices, product and customer management, outstanding balances and reporting.</p>
-<div class="pills"><span class="pill">ASP.NET MVC</span><span class="pill">EF Core</span><span class="pill">SQL Server</span></div>
-</div>
-<div class="card">
-<span class="project-label">Project concept · Verify status</span>
-<h3>Knowledge-Base Chatbot</h3>
-<p class="muted">A chatbot concept for searching knowledge-base articles and presenting relevant answers through an application interface.</p>
-<div class="pills"><span class="pill">ASP.NET</span><span class="pill">JSON</span><span class="pill">AI integration</span></div>
-</div>
-<div class="card">
-<span class="project-label">Project concept · Verify status</span>
-<h3>Subscription Platform</h3>
-<p class="muted">A proposed platform with membership management, course content, payment processing and an administrative dashboard.</p>
-<div class="pills"><span class="pill">ASP.NET Core</span><span class="pill">SQL</span><span class="pill">Payments</span></div>
-</div>
-<div class="card">
-<span class="project-label">Add a real achievement</span>
-<h3>What I bring</h3>
-<p class="muted">Highlight a challenging technical problem you solved, a performance improvement you delivered, or a feature you shipped successfully.</p>
-</div>
-</div>
-</div>
-</section>
+          <div class="hero-actions">
+            <a class="button button-primary"
+               href="Nagarjun_Parmar_Resume.pdf"
+               download="Nagarjun_Parmar_Resume.pdf">
+              Download Resume <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button" href="#experience">
+              Explore my journey <span aria-hidden="true">↘</span>
+            </a>
+          </div>
 
-<section id="education">
-<div class="wrap">
-<div class="section-head"><div class="kicker">Education</div><h2>Academic background</h2></div>
-<div class="grid">
-<div class="card"><h3>Bachelor of Engineering — Information Technology</h3><p class="muted">Atmiya Institute of Technology & Science</p><p class="date">March 2013 – June 2016</p></div>
-<div class="card"><h3>Diploma — Information Technology</h3><p class="muted">Balaji Institute of Engineering and Technology</p><p class="date">June 2010 – February 2013</p></div>
-</div>
-</div>
-</section>
+          <div class="hero-meta">
+            <span><i class="status-dot"></i> Building since 2020</span>
+            <span>⌘ .NET & Backend Engineering</span>
+            <span>✳ AI-assisted development</span>
+          </div>
+        </div>
+      </section>
 
-<section id="contact">
-<div class="wrap">
-<div class="contact">
-<div class="kicker">Let's connect</div>
-<h2>Have a project in mind?</h2>
-<p class="muted">Explore my professional background or connect with me through LinkedIn.</p>
-<div class="actions">
-<a class="btn primary" href="https://www.linkedin.com/in/nagarjun-p-5420171b4" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
-</div>
-<p class="muted" style="font-size:12px">Add your preferred public email address here if you'd like recruiters to contact you directly.</p>
-</div>
-</div>
-</section>
-</main>
+      <section id="about" class="reveal">
+        <div class="section-heading">
+          <div class="section-kicker">01 / About</div>
+          <h2>Practical engineering.<br><span class="gradient-text">Purposeful outcomes.</span></h2>
+          <p class="section-intro">
+            I’m a software developer with professional experience building and
+            maintaining web applications, backend features, integrations, and
+            database-driven workflows.
+          </p>
+        </div>
 
-<footer><div class="wrap">© <span id="year">2026</span> Nagarjun Parmar · Software Developer</div></footer>
+        <div class="about-grid">
+          <article class="glass-card">
+            <p>
+              My work spans C#, .NET, ASP.NET MVC/Core, REST APIs, SQL Server,
+              and application troubleshooting. I enjoy turning business
+              requirements into maintainable features, improving existing
+              systems, and solving problems that affect real users.
+            </p>
+            <p>
+              I also use AI-assisted development practices—including prompt
+              engineering, structured Markdown instructions, and agentic
+              workflow concepts—to support research, implementation, and
+              documentation while keeping engineering judgement at the centre.
+            </p>
+          </article>
+
+          <article class="glass-card principles">
+            <div class="principle">
+              <span class="principle-icon">01</span>
+              <div>
+                <strong>Backend-first thinking</strong>
+                <small>Business logic, API design, data workflows, and reliability.</small>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle-icon">02</span>
+              <div>
+                <strong>Problem-solving mindset</strong>
+                <small>Debugging, maintenance, and improving existing applications.</small>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle-icon">03</span>
+              <div>
+                <strong>Continuous learning</strong>
+                <small>Modern development tools and thoughtful AI-assisted practices.</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="reveal">
+        <div class="section-heading">
+          <div class="section-kicker">02 / Experience</div>
+          <h2>The professional <span class="gradient-text">journey.</span></h2>
+          <p class="section-intro">
+            A timeline of roles, responsibilities, and experience gained along the way.
+          </p>
+        </div>
+
+        <div class="journey-wrap">
+          <div class="journey-rail"><div class="journey-fill"></div></div>
+          <div class="journey-orb"></div>
+
+          <article class="journey-item">
+            <div class="glass-card journey-card">
+              <h3>Senior Software Developer</h3>
+              <div class="journey-company">Etech Global Services</div>
+              <span class="journey-date">May 2026 – Present</span>
+              <ul>
+                <li>Develop backend functionality and enhancements for a contact-centre quality evaluation application.</li>
+                <li>Research and implement features while improving existing capabilities.</li>
+                <li>Work with application logic and SQL Server to support business workflows.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <div class="glass-card journey-card">
+              <h3>Software Developer</h3>
+              <div class="journey-company">Etech Global Services</div>
+              <span class="journey-date">Sep 2024 – Apr 2026</span>
+              <ul>
+                <li>Built and maintained application features and backend functionality.</li>
+                <li>Investigated defects, implemented enhancements, and supported existing systems.</li>
+                <li>Collaborated with team members to deliver application changes.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <div class="glass-card journey-card">
+              <h3>Senior Software Developer</h3>
+              <div class="journey-company">PrishuSoft · Ahmedabad</div>
+              <span class="journey-date">Jun 2021 – Sep 2024</span>
+              <ul>
+                <li>Developed backend features for transport management and customer invoicing.</li>
+                <li>Worked on daily job entries, employee and truck-driver records, and invoices.</li>
+                <li>Supported customer issues, coordinated workflow, and assigned development tasks.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <div class="glass-card journey-card">
+              <h3>Junior Software Developer</h3>
+              <div class="journey-company">Desai Software · Surat</div>
+              <span class="journey-date">Mar 2020 – Jun 2021</span>
+              <ul>
+                <li>Contributed to outsourced software assignments using .NET Core, C#, APIs, and SQL Server.</li>
+                <li>Implemented backend and data operations, fixed defects, and maintained existing functionality.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="reveal">
+        <div class="section-heading">
+          <div class="section-kicker">03 / Education</div>
+          <h2>Learning that built <span class="gradient-text">the foundation.</span></h2>
+        </div>
+
+        <div class="journey-wrap">
+          <div class="journey-rail"><div class="journey-fill"></div></div>
+          <div class="journey-orb"></div>
+
+          <article class="journey-item">
+            <div class="glass-card journey-card">
+              <h3>Bachelor of Engineering · Information Technology</h3>
+              <div class="journey-company">Atmiya Institute of Technology & Science</div>
+              <span class="journey-date">Mar 2013 – Jun 2016</span>
+              <p class="education-note">Undergraduate education in Information Technology.</p>
+            </div>
+          </article>
+
+          <article class="journey-item">
+            <div class="glass-card journey-card">
+              <h3>Diploma · Information Technology</h3>
+              <div class="journey-company">Balaji Institute of Engineering and Technology</div>
+              <span class="journey-date">Jun 2010 – Feb 2013</span>
+              <p class="education-note">Technical foundation in computing and software development.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <div class="section-heading">
+          <div class="section-kicker">04 / Toolkit</div>
+          <h2>Tools I use to <span class="gradient-text">build and ship.</span></h2>
+          <p class="section-intro">
+            A practical toolkit for application development, backend services,
+            data access, and modern AI-assisted workflows.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="glass-card skill-group">
+            <h3>Languages & Frameworks</h3>
+            <div class="skill-list">
+              <span class="skill-chip highlight">C#</span>
+              <span class="skill-chip highlight">.NET</span>
+              <span class="skill-chip highlight">.NET Core</span>
+              <span class="skill-chip">ASP.NET MVC</span>
+              <span class="skill-chip">ASP.NET Core MVC</span>
+              <span class="skill-chip">Razor Pages</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">HTML & CSS</span>
+            </div>
+          </article>
+
+          <article class="glass-card skill-group">
+            <h3>Backend & Data</h3>
+            <div class="skill-list">
+              <span class="skill-chip highlight">REST APIs</span>
+              <span class="skill-chip">API Integrations</span>
+              <span class="skill-chip">gRPC</span>
+              <span class="skill-chip highlight">SQL Server</span>
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">Entity Framework Core</span>
+              <span class="skill-chip">EF Migrations</span>
+              <span class="skill-chip">Dapper</span>
+              <span class="skill-chip">Stored Procedures</span>
+            </div>
+          </article>
+
+          <article class="glass-card skill-group">
+            <h3>AI & Developer Tools</h3>
+            <div class="skill-list">
+              <span class="skill-chip highlight">AI-assisted Development</span>
+              <span class="skill-chip highlight">Prompt Engineering</span>
+              <span class="skill-chip">Agentic AI Workflow Concepts</span>
+              <span class="skill-chip">Markdown Instructions</span>
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">Visual Studio</span>
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Debugging</span>
+              <span class="skill-chip">Application Maintenance</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="reveal">
+        <div class="section-heading">
+          <div class="section-kicker">05 / Selected Work</div>
+          <h2>Systems built around <span class="gradient-text">real workflows.</span></h2>
+          <p class="section-intro">
+            Professional experience and personal project concepts, described
+            without exposing proprietary implementation details.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="glass-card project-card">
+            <div class="project-top">
+              <span class="project-number">PROJECT / 01</span>
+              <span class="project-type">Professional experience</span>
+            </div>
+            <h3>QEval</h3>
+            <div class="project-subtitle">Contact-Centre Quality Evaluation</div>
+            <p>Backend functionality and application enhancements for reviewing customer interactions.</p>
+            <ul>
+              <li>Call-player enhancements and application feature development.</li>
+              <li>Call-content analysis workflows with summaries and evaluation verdicts.</li>
+              <li>Quality-assurance chatbot experience for uploaded call content.</li>
+            </ul>
+            <div class="project-stack">
+              <span>.NET</span><span>C#</span><span>SQL Server</span><span>Backend Engineering</span>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-top">
+              <span class="project-number">PROJECT / 02</span>
+              <span class="project-type">Professional experience</span>
+            </div>
+            <h3>iCON</h3>
+            <div class="project-subtitle">Transport Management & Customer Invoicing</div>
+            <p>Backend features for transport operations and customer billing workflows.</p>
+            <ul>
+              <li>Daily job, employee, and truck-driver record management.</li>
+              <li>Customer invoicing functionality and related data operations.</li>
+              <li>Customer support, troubleshooting, and team task coordination.</li>
+            </ul>
+            <div class="project-stack">
+              <span>.NET</span><span>C#</span><span>SQL Server</span><span>Business Workflows</span>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-top">
+              <span class="project-number">CONCEPT / 03</span>
+              <span class="project-type">Personal concept</span>
+            </div>
+            <h3>Stock & Invoice Manager</h3>
+            <div class="project-subtitle">Inventory, Sales & Billing</div>
+            <p>A proposed application for managing products, suppliers, customers, invoices, and outstanding balances.</p>
+            <ul>
+              <li>Purchase and sales records with invoice generation.</li>
+              <li>Customer credit/debit tracking and outstanding reports.</li>
+              <li>Database-driven reporting and maintainable application layers.</li>
+            </ul>
+            <div class="project-stack">
+              <span>ASP.NET Core MVC</span><span>EF Core</span><span>SQL Server</span>
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <div class="project-top">
+              <span class="project-number">CONCEPT / 04</span>
+              <span class="project-type">Personal concept</span>
+            </div>
+            <h3>Knowledge-Base Assistant</h3>
+            <div class="project-subtitle">Searchable Support Knowledge</div>
+            <p>A proposed assistant that retrieves useful answers from curated knowledge-base articles.</p>
+            <ul>
+              <li>Search and retrieve matching knowledge articles.</li>
+              <li>Structure source content for grounded responses.</li>
+              <li>Explore an ASP.NET MVC interface and AI-assisted answer generation.</li>
+            </ul>
+            <div class="project-stack">
+              <span>ASP.NET MVC</span><span>C#</span><span>JSON</span><span>AI Concepts</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <div class="glass-card contact-panel">
+          <div>
+            <div class="section-kicker">06 / Contact</div>
+            <h2>Have an idea?<br><span class="gradient-text">Let’s connect.</span></h2>
+            <p>
+              For professional conversations, collaboration, or software
+              development discussions, reach out through email or LinkedIn.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:nagarjun.parmar1993@gmail.com">
+                Email me ↗
+              </a>
+              <a class="button"
+                 href="Nagarjun_Parmar_Resume.pdf"
+                 download="Nagarjun_Parmar_Resume.pdf">
+                Resume PDF ↓
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:nagarjun.parmar1993@gmail.com">
+              <small>EMAIL</small>
+              <span>nagarjun.parmar1993@gmail.com</span>
+            </a>
+
+            <a class="contact-link"
+               href="https://www.linkedin.com/in/nagarjun-p-5420171b4"
+               target="_blank"
+               rel="noopener noreferrer">
+              <small>LINKEDIN</small>
+              <span>linkedin.com/in/nagarjun-p-5420171b4 ↗</span>
+            </a>
+
+            <div class="contact-link">
+              <small>LOCATION</small>
+              <span>Gujarat, India</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Nagarjun Parmar</span>
+      <span>Designed with intention · Built for the web</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </div>
+
+  <script>
+    // Reveal sections when they enter the viewport.
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll(".reveal").forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => {
+        element.classList.add("in-view");
+      });
+    }
+
+    // Update the timeline progress as the user scrolls.
+    const journeySections = document.querySelectorAll(".journey-wrap");
+    let ticking = false;
+
+    function updateJourneys() {
+      const viewportHeight = window.innerHeight ||
+        document.documentElement.clientHeight;
+
+      journeySections.forEach((journey) => {
+        const rect = journey.getBoundingClientRect();
+        const start = viewportHeight * 0.72;
+        const end = -rect.height + viewportHeight * 0.28;
+        const distance = start - end;
+
+        const progress = distance > 0
+          ? Math.max(0, Math.min(1, (start - rect.top) / distance))
+          : 0;
+
+        journey.style.setProperty(
+          "--journey-progress",
+          `${progress * 100}%`
+        );
+
+        journey.querySelectorAll(".journey-item").forEach((item) => {
+          const itemRect = item.getBoundingClientRect();
+
+          if (
+            itemRect.top < viewportHeight * 0.88 &&
+            itemRect.bottom > viewportHeight * 0.08
+          ) {
+            item.classList.add("visible");
+          }
+        });
+      });
+
+      ticking = false;
+    }
+
+    function requestJourneyUpdate() {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateJourneys);
+      }
+    }
+
+    window.addEventListener("scroll", requestJourneyUpdate, { passive: true });
+    window.addEventListener("resize", requestJourneyUpdate);
+    updateJourneys();
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
